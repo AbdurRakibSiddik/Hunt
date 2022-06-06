@@ -1,0 +1,250 @@
+@import '../mixins/mixin';
+@import '../variables/variable';
+
+/*==============================================
+                About Part Start
+================================================*/
+#about {
+    margin-bottom: 60px;
+
+    .common_head {
+        padding-bottom: 38px;
+
+        h2 {
+            @include fs($head, 35px, 500, $my);
+            padding-bottom: 15px
+        }
+
+        p {
+            @include fs($para, 14px, 400, $opn);
+            line-height: 24px;
+        }
+    }
+
+    .box1 {
+        padding: 35px 17px;
+        background: #dddddd;
+        margin-bottom: 52px;
+        position: relative;
+        transition: all linear .3s;
+
+        &:hover {
+            box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.6);
+
+            &::before {
+                background: $hover;
+            }
+        }
+
+        h3 {
+            @include fs($head, 18px, 500, $rale);
+            text-transform: uppercase;
+        }
+
+        p {
+            @include fs($para, 14px, 400, $opn);
+            line-height: 24px;
+        }
+
+        &::after {
+            @include after_bl(-40px, 50%, 0, 0, transparent);
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-top: 20px solid #ddd;
+            transform: translateX(-50%);
+            transition: all linear .3s;
+        }
+
+        &::before {
+            @include after_bl(-46px, 50%, 20px, 20px, black);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            transition: all linear .3s;
+            z-index: 1;
+        }
+    }
+
+    .about_img {
+        position: relative;
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+
+        img {
+            transform: translatex(50vw);
+            transform: translateY(30vh);
+            animation-name: rotate;
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+        }
+
+        &::after {
+            @include after_tl(-17px, -17px, 460px, 458px, transparent);
+            border-radius: 50%;
+            border: 1px solid black;
+            z-index: -1;
+        }
+
+
+    }
+
+    .box {
+        position: relative;
+
+        .box2 {
+            padding: 35px 58px;
+            background: #dddddd;
+            margin-bottom: 30px;
+            position: absolute;
+            text-align: end;
+            top: -50%;
+            right: 30px;
+            transform: translateY(55%);
+            transition: all linear .3s;
+
+            &:hover {
+                box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.6);
+
+                &::before {
+                    background: $hover;
+                }
+            }
+
+            &::before {
+                @include after_br(58px, -15%, 20px, 20px, black);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                transition: all linear .3s;
+                z-index: 1;
+            }
+
+            h3 {
+                @include fs($head, 18px, 500, $rale);
+                text-transform: uppercase;
+            }
+
+            p {
+                @include fs($para, 14px, 400, $opn);
+                line-height: 24px;
+            }
+
+            &::after {
+                @include after_br(58px, -40px, 0, 0, transparent);
+                border-left: 20px solid #ddd;
+                border-right: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+                border-top: 20px solid transparent;
+            }
+        }
+
+        .box3 {
+            padding: 35px 56px;
+            background: #dddddd;
+            margin-bottom: 30px;
+            position: absolute;
+            text-align: left;
+            top: -50%;
+            left: 35px;
+            transform: translateY(55%);
+            transition: all linear .3s;
+
+            &:hover {
+                box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.6);
+
+                &::before {
+                    background: $hover;
+                }
+            }
+
+            &::before {
+                @include after_tl(58%, -10%, 20px, 20px, black);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                transition: all linear .3s;
+                z-index: 1;
+            }
+
+
+            h3 {
+                @include fs($head, 18px, 500, $rale);
+                text-transform: uppercase;
+            }
+
+            p {
+                @include fs($para, 14px, 400, $opn);
+                line-height: 24px;
+            }
+
+            &::after {
+                @include after_bl(58px, -40px, 0, 0, transparent);
+                border-left: 20px solid transparent;
+                border-right: 20px solid #ddd;
+                border-bottom: 20px solid transparent;
+                border-top: 20px solid transparent;
+            }
+        }
+    }
+
+    .box6 {
+        position: relative;
+
+        .box4 {
+            padding: 35px 17px;
+            background: #dddddd;
+            margin-top: 60px;
+            // position: absolute;
+            // top: 0;
+            // left: 1px;
+            transition: all linear .3s;
+
+            &:hover {
+                box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.6);
+
+                &::before {
+                    background: $hover;
+                }
+            }
+
+            &::before {
+                @include after_tl(-50px, 50%, 20px, 20px, black);
+                border-radius: 50%;
+                transform: translateX(-50%);
+                transition: all linear .3s;
+                z-index: 1;
+            }
+
+            h3 {
+                @include fs($head, 18px, 500, $rale);
+                text-transform: uppercase;
+            }
+
+            p {
+                @include fs($para, 14px, 400, $opn);
+                line-height: 24px;
+            }
+
+            &::after {
+                @include after_tl(-40px, 50%, 0, 0, transparent);
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-bottom: 20px solid #ddd;
+                border-top: 20px solid transparent;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+/*==============================================
+                About Part End
+================================================*/

@@ -1,0 +1,183 @@
+@import '../mixins/mixin';
+@import '../variables/variable';
+
+/*==============================================
+                Testimonial Part Start
+================================================*/
+#test {
+    padding: 200px 0 160px;
+    clip-path: polygon(0 13%, 100% 0, 100% 89%, 0 100%);
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        @include after_tl(0, 0, 100%, 100%, rgba(0, 0, 0, 0.8));
+        z-index: -1;
+    }
+
+    .shape_img {
+        position: absolute;
+        left: 23.7%;
+        top: 176px;
+    }
+
+    .db_3 {
+        .draggable {
+            padding: 10px 0 !important;
+        }
+
+        .slick-slide {
+            padding: 25px 107px;
+        }
+
+
+        .slick-center {
+            position: relative;
+            z-index: 1;
+
+            img {
+                transform: scale(1.3);
+            }
+
+            &::after {
+                @include after_tl(50%, 50.5%, 140px, 140px, $hover);
+                border-radius: 50%;
+                z-index: -1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .test_img1 {
+            position: relative;
+            transition: all linear .3s;
+        }
+
+        .test_img2 {
+            position: relative;
+
+
+            img {
+                width: 101px;
+                height: 108px;
+            }
+        }
+
+        .test_img3 {
+            transition: all linear .3s;
+        }
+
+        .nxt_arr {
+            position: absolute;
+            right: 37%;
+            bottom: -90px;
+            background: white;
+            border: 1px solid $para;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            line-height: 40px;
+            cursor: pointer;
+            z-index: 99;
+            font-size: 22px;
+            transition: all linear .3s;
+
+            &:hover {
+                background: $hover;
+                border-color: $hover;
+            }
+        }
+
+        .prv_arr {
+            position: absolute;
+            left: 51%;
+            top: -15px;
+            background: white;
+            border: 1px solid $para;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            line-height: 40px;
+            cursor: pointer;
+            z-index: 99;
+            font-size: 22px;
+            transition: all linear .3s;
+
+            &:hover {
+                background: $hover;
+                border-color: $hover;
+            }
+        }
+    }
+
+    .db_1 {
+        // .slick-current {
+        //     position: relative;
+
+        //     &::after {
+        //         @include after_bl(150px, -40px, 0, 0, transparent);
+        //         border-left: 20px solid transparent;
+        //         border-right: 20px solid #f1f1f1;
+        //         border-bottom: 20px solid transparent;
+        //         border-top: 20px solid transparent;
+        //     }
+        // }
+
+        .test_text {
+            padding: 50px 30px;
+            background: #f1f1f1;
+            position: relative;
+            margin-top: 99px;
+            transition: all linear .3s;
+            width: 680px;
+            margin-left: 22px;
+
+            .slick-active{
+                box-shadow: 0 10px 10px 1px rgba(235, 6, 6, 0.596);
+            }
+            &::after {
+                @include after_bl(150px, -40px, 0, 0, transparent);
+                border-left: 20px solid transparent;
+                border-right: 20px solid #f1f1f1;
+                border-bottom: 20px solid transparent;
+                border-top: 20px solid transparent;
+            }
+
+            h5 {
+                @include fs(#222222, 20px, 500, $rale);
+            }
+
+            i {
+                color: $hover;
+            }
+
+            span {
+                @include fs($para, 16px, 400, $rale);
+                padding-bottom: 15px;
+                display: block;
+            }
+
+            p {
+                @include fs($para, 14px, 400, $opn);
+                line-height: 24px;
+                padding-bottom: 5px;
+            }
+
+            h4 {
+                @include fs($para, 20px, 500, $my);
+            }
+
+            // &:hover {
+            //     box-shadow: 0 2px 8px 2px rgba(3, 201, 250, 0.8);
+            //     transform: scale(1.1);
+            // }
+        }
+    }
+}
+
+/*==============================================
+                Testimonial Part End
+================================================*/

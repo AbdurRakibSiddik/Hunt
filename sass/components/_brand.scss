@@ -1,0 +1,45 @@
+@import '../mixins/mixin';
+@import '../variables/variable';
+
+/*==============================================
+                Brand Part Start
+================================================*/
+#brand {
+    padding: 60px 0;
+    background: $ash;
+    clip-path: polygon(0 14%, 100% 0, 100% 88%, 0% 100%);
+
+    .brandd {
+        .draggable {
+            padding: 15px 0 !important;
+        }
+
+        .slick-slide {
+            padding: 0 13px;
+        }
+
+        .slick-center {
+            .brand_img {
+                // box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.6);
+                border: 2px solid $hover;
+                transform: skew(20deg) scale(1.1);
+
+            }
+        }
+
+        .brand_img {
+            padding: 40px 25px;
+            border: 1px solid $para;
+            transition: all linear .3s;
+            transform: skew(20deg);
+
+            img {
+                transform: skew(-20deg);
+            }
+        }
+    }
+}
+
+/*==============================================
+                Brand Part End
+================================================*/

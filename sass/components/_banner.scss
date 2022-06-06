@@ -1,0 +1,122 @@
+@import '../mixins/mixin';
+@import '../variables/variable';
+
+/*==============================================
+                Banner Part Start
+================================================*/
+#banner {
+    .banner_slider {
+        transition: all linear .3s;
+
+        .banner_item {
+            padding: 245px 0 185px;
+            clip-path: polygon(0 0, 100% 0, 100% 86%, 0% 100%);
+            position: relative;
+            z-index: 1;
+            transition: all linear .3s;
+
+            &::after {
+                @include after_tl(0, 0, 100%, 100%, rgba(0, 0, 0, 0.6));
+                z-index: -1;
+            }
+
+            .banner_text {
+                h2 {
+                    @include fs($white, 36px, 400, $my);
+                }
+
+                h1 {
+                    @include fs($hover, 55px, 700, $rale);
+                    text-transform: uppercase;
+                    padding-bottom: 8px;
+                }
+
+                p {
+                    @include fs($white, 14px, 400, $opn);
+                    line-height: 24px;
+                    width: 570px;
+                    margin: 0 auto;
+                    padding-bottom: 60px;
+                }
+
+                a {
+                    transition: all linear .3s;
+
+                    &:hover {
+                        color: #222222;
+                        background: $hover;
+                        border-color: $hover;
+                    }
+                }
+
+                .view {
+                    @include fs($white, 16px, 400, $rale);
+                    text-transform: uppercase;
+                    padding: 20px 22px;
+                    line-height: 1;
+                    border: 1px solid white;
+                    margin-right: 10px;
+                    transition: all linear .3s;
+                }
+
+                .hire {
+                    @include fs($white, 16px, 400, $rale);
+                    text-transform: uppercase;
+                    padding: 20px 33px;
+                    line-height: 1;
+                    border: 1px solid white;
+                    margin-left: 10px;
+                    transition: all linear .3s;
+                }
+
+            }
+
+        }
+
+        .nxt_arr {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            background: white;
+            transform: translateY(-50%);
+            text-align: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            line-height: 35px;
+            cursor: pointer;
+            z-index: 99;
+            font-size: 22px;
+            transition: all linear .3s;
+
+            &:hover {
+                background: $hover;
+            }
+        }
+
+        .prv_arr {
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            background: white;
+            transform: translateY(-50%);
+            text-align: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            line-height: 35px;
+            cursor: pointer;
+            z-index: 99;
+            font-size: 22px;
+            transition: all linear .3s;
+
+            &:hover {
+                background: $hover;
+            }
+        }
+    }
+}
+
+/*==============================================
+                Banner Part End
+================================================*/

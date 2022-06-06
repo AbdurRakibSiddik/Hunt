@@ -1,0 +1,87 @@
+@import '../mixins/mixin';
+@import '../variables/variable';
+
+/*==============================================
+                Our Portfolio Part Start
+================================================*/
+#portfolio {
+    padding: 100px 0 130px;
+    clip-path: polygon(0 12%, 100% 0, 100% 88%, 0% 100%);
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        @include after_tl(0, 0, 100%, 100%, rgba(0, 0, 0, 0.7));
+        z-index: -1;
+    }
+
+    .common_head {
+        padding-bottom: 38px;
+
+        h2 {
+            @include fs($white, 35px, 500, $my);
+            padding-bottom: 15px
+        }
+
+        p {
+            @include fs($white, 14px, 400, $opn);
+            line-height: 24px;
+        }
+    }
+
+    .port_img {
+        position: relative;
+        margin-bottom: 20px;
+        overflow: hidden;
+        transition: all linear .3s;
+
+        .overly {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            right: 10px;
+            bottom: 10px;
+            background: rgba(56, 186, 226, 0.5);
+            border: 5px solid rgba(255, 255, 255, 0.8);
+            transform: scale(0);
+            transition: all linear .3s;
+
+            a {
+                @include middle();
+                font-size: 30px;
+                color: white;
+                transition: all linear .3s;
+            }
+        }
+
+        &:hover .overly {
+            transform: scale(1);
+        }
+
+        img {
+            // overflow: hidden;
+            transition: all linear 0.3s;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+        }
+
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(6),
+        &:nth-child(8),
+        &:nth-child(10) {
+            margin-bottom: 0;
+        }
+
+    }
+
+
+}
+
+/*==============================================
+                Our Portfolio Part End
+================================================*/

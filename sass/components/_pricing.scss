@@ -1,0 +1,148 @@
+@import '../mixins/mixin';
+@import '../variables/variable';
+
+/*==============================================
+                Pricing Part Start
+================================================*/
+#price {
+    // padding: 60px 0  0;
+
+    .common_head {
+        padding-bottom: 38px;
+
+        h2 {
+            @include fs($head, 35px, 500, $my);
+            padding-bottom: 15px
+        }
+
+        p {
+            @include fs($para, 14px, 400, $opn);
+            line-height: 24px;
+        }
+    }
+
+    .price_list {
+        padding-top: 25px;
+        transition: all linear .3s;
+
+        h2 {
+            padding: 30px 0 94px;
+            background: $para;
+            clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+            @include fs($white, 20px, 500, $rale);
+            text-transform: uppercase;
+            transition: all linear .3s;
+        }
+
+        .circle {
+            position: relative;
+            top: -50px;
+
+            &::after {
+                @include after_tl(-18px, 39%, 92px, 95px, transparent);
+                border-radius: 50%;
+                border: 1px solid $para;
+                z-index: 1;
+                transition: all linear .3s;
+            }
+
+            h3 {
+                position: relative;
+                z-index: 1;
+                transition: all linear .3s;
+
+                &::after {
+                    @include after_tl(-13px, 40%, 85px, 85px, $para);
+                    border-radius: 50%;
+                    z-index: -1;
+                    transition: all linear .3s;
+                }
+
+                &::before {
+                    @include after_tl(-16px, 39.2%, 90px, 90px, transparent);
+                    border-radius: 50%;
+                    border: 3px solid $white;
+                }
+
+                @include fs($hover, 29px, 400, $my);
+
+                span {
+                    display: block;
+                    @include fs($hover, 12px, 300, $rale);
+                    transition: all linear .3s;
+                }
+            }
+        }
+
+        ul {
+            position: relative;
+            padding: 75px 0 35px;
+            background: #ccc;
+            top: -86px;
+            clip-path: polygon(0 12%, 100% 0, 100% 88%, 0% 100%);
+
+            li {
+                @include fs($para, 14px, 400, $opn);
+                padding-bottom: 20px;
+            }
+        }
+
+        .btn {
+            position: relative;
+            padding: 42px 0 25px;
+            background: $para;
+            clip-path: polygon(0 42%, 100% 0, 100% 100%, 0% 100%);
+            display: block;
+            top: -127px;
+            transition: all linear .3s;
+
+            a {
+                @include fs($white, 16px, 500, $rale);
+                text-transform: uppercase;
+                transition: all linear .3s;
+            }
+        }
+
+        &:hover {
+            h2 {
+                background: $hover;
+                color: $head;
+            }
+
+            .circle {
+                &::after {
+                    border: 2px solid $hover;
+                }
+
+                h3 {
+                    z-index: 1;
+                    color: $head;
+
+                    &::after {
+                        background: $hover;
+                        z-index: -1;
+                    }
+
+                    span {
+                        color: $head;
+                    }
+                }
+            }
+
+            .btn {
+                background: $hover;
+
+                a {
+                    color: $head;
+                }
+            }
+
+            transform: scale(1.1);
+        }
+
+    }
+}
+
+/*==============================================
+                Pricing Part End
+================================================*/

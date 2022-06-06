@@ -1,0 +1,331 @@
+@import '../mixins/mixin';
+@import '../variables/variable';
+
+/*==============================================
+                Service Part Start
+================================================*/
+#service {
+    position: relative;
+    padding: 60px 0;
+
+    .common_head {
+        padding-bottom: 38px;
+
+        h2 {
+            @include fs($head, 35px, 500, $my);
+            padding-bottom: 15px
+        }
+
+        p {
+            @include fs($para, 14px, 400, $opn);
+            line-height: 24px;
+        }
+    }
+
+    // .serv_text {
+    //     position: relative;
+    //     padding-top: 80px;
+
+    //     &:hover {
+    //         .serv_img {
+    //             &::after {
+    //                 transform: scale(1)
+    //             }
+    //         }
+    //     }
+
+    //     h2 {
+    //         @include fs($head, 18px, 500, $rale);
+    //         text-transform: uppercase;
+    //         text-align: right;
+    //         position: absolute;
+    //         left: 30%;
+    //         top: 66%;
+    //         transform: translateY(-50%);
+    //     }
+
+    //     .serv_img {
+    //         position: absolute;
+    //         text-align: center;
+    //         right: 48%;
+    //         top: 60%;
+    //         z-index: 1;
+
+    //         &::after {
+    //             @include after_tl(-30px, -30px, 100px, 100px, $hover);
+    //             border-radius: 50%;
+    //             z-index: -1;
+    //             transform: scale(0);
+    //             transition: all linear .3s;
+    //         }
+    //     }
+
+    //     .boxx {
+    //         padding: 60px 25px;
+    //         background: #ddd;
+    //         // position: absolute;
+    //         position: relative;
+    //         transition: all linear .3s;
+
+    //         p {
+    //             @include fs($para, 14px, 400, $opn);
+    //             line-height: 24px;
+    //         }
+
+    //         &::after {
+    //             @include after_bl(79px, -40px, 0, 0, transparent);
+    //             border-left: 20px solid transparent;
+    //             border-right: 20px solid #ddd;
+    //             border-bottom: 20px solid transparent;
+    //             border-top: 20px solid transparent;
+    //         }
+
+    //         // &:hover {
+    //         //     box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.6);
+    //         //     transform: scale(1.1);
+    //         // }
+    //     }
+    // }
+
+    // .serv_text2 {
+    //     position: relative;
+    //     padding-top: 80px;
+
+    //     // &:hover {
+    //     //     .serv_img {
+    //     //         &::after {
+    //     //             transform: scale(1)
+    //     //         }
+    //     //     }
+    //     // }
+
+    //     h2 {
+    //         @include fs($head, 18px, 500, $rale);
+    //         text-transform: uppercase;
+    //         text-align: right;
+    //         position: absolute;
+    //         right: 30%;
+    //         top: 66%;
+    //         transform: translateY(-50%);
+    //     }
+
+    //     .serv_img {
+    //         position: absolute;
+    //         text-align: center;
+    //         right: 48%;
+    //         top: 56%;
+    //         z-index: 1;
+    //         &::after {
+    //             @include after_tl(-20px, -20px, 100px, 100px, $hover);
+    //             border-radius: 50%;
+    //             z-index: -1;
+    //             transform: scale(0);
+    //             transition: all linear .3s;
+    //         }
+    //     }
+
+    //     .boxx {
+    //         padding: 60px 25px;
+    //         background: #ddd;
+    //         // position: absolute;
+    //         position: relative;
+    //         transition: all linear .3s;
+
+    //         p {
+    //             @include fs($para, 14px, 400, $opn);
+    //             line-height: 24px;
+    //         }
+
+    //         &::after {
+    //             @include after_br(79px, -40px, 0, 0, transparent);
+    //             border-left: 20px solid #ddd;
+    //             border-right: 20px solid transparent;
+    //             border-bottom: 20px solid transparent;
+    //             border-top: 20px solid transparent;
+    //         }
+
+    //         // &:hover {
+    //         //     box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.6);
+    //         //     transform: scale(1.1);
+    //         // }
+    //     }
+    // }
+
+
+    .line_shape {
+        position: absolute;
+        left: 50%;
+        bottom: 86px;
+    }
+
+    .serv_slider {
+        position: relative;
+        padding-top: 120px;
+
+        .slick-center {
+            .middle {
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    @include after_tl(81%, 51%, 80px, 80px, $hover);
+                    border-radius: 50%;
+                    z-index: -1;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .middle2 {
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    @include after_tl(81%, 50%, 90px, 90px, $hover);
+                    border-radius: 50%;
+                    z-index: -1;
+                    transform: translate(-50%, -50%);
+                }
+
+            }
+
+            .right {
+                box-shadow: 1px 2px 4px 2px rgba(0, 0, 0, 0.6);
+                // transform: scale(1.1);
+            }
+
+            .right2 {
+                box-shadow: 1px 2px 4px 2px rgba(0, 0, 0, 0.6);
+                // transform: scale(1.1);
+            }
+        }
+
+
+
+        .slider_item {
+            padding-bottom: 45px;
+
+            .left {
+                h2 {
+                    @include fs($head, 18px, 500, $rale);
+                    text-transform: uppercase;
+                    text-align: right;
+                    padding-top: 88px;
+                }
+            }
+
+            .middle {
+                text-align: center;
+                padding-top: 81px;
+                padding-left: 81px;
+            }
+
+            .middle2 {
+                text-align: center;
+                padding-top: 72px;
+                padding-left: 68px;
+            }
+
+            .right {
+                padding: 40px 25px;
+                background: #ddd;
+                position: relative;
+
+                &::after {
+
+                    @include after_bl(79px, -40px, 0, 0, transparent);
+                    border-left: 20px solid transparent;
+                    border-right: 20px solid #ddd;
+                    border-bottom: 20px solid transparent;
+                    border-top: 20px solid transparent;
+                }
+
+                p {
+                    @include fs($para, 14px, 400, $opn);
+                    line-height: 24px;
+                    width: 410px;
+                }
+            }
+
+            .left2 {
+                h2 {
+                    @include fs($head, 18px, 500, $rale);
+                    text-transform: uppercase;
+                    text-align: left;
+                    padding-top: 101px;
+                }
+            }
+
+            .right2 {
+                padding: 40px 25px;
+                background: #ddd;
+                position: relative;
+
+                &::after {
+
+                    @include after_br(79px, -40px, 0, 0, transparent);
+                    border-left: 20px solid #ddd;
+                    border-right: 20px solid transparent;
+                    border-bottom: 20px solid transparent;
+                    border-top: 20px solid transparent;
+                }
+
+                p {
+                    @include fs($para, 14px, 400, $opn);
+                    line-height: 24px;
+                    width: 410px;
+                }
+            }
+
+        }
+
+        .nxt_arr {
+            position: absolute;
+            right: 46.8%;
+            bottom: -40px;
+            background: white;
+            border: 1px solid $para;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            line-height: 40px;
+            cursor: pointer;
+            z-index: 99;
+            font-size: 22px;
+            transition: all linear .3s;
+
+            &:hover {
+                background: $hover;
+                border-color: $hover;
+            }
+        }
+
+        .prv_arr {
+            position: absolute;
+            left: 50%;
+            top: 25px;
+            background: white;
+            border: 1px solid $para;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            line-height: 40px;
+            cursor: pointer;
+            z-index: 99;
+            font-size: 22px;
+            transition: all linear .3s;
+
+            &:hover {
+                background: $hover;
+                border-color: $hover;
+            }
+        }
+    }
+}
+
+/*==============================================
+                Service Part End
+================================================*/

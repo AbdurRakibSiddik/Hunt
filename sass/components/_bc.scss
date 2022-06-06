@@ -1,0 +1,28 @@
+@import '../mixins/mixin';
+@import '../variables/variable';
+
+/*==============================================
+                BC Part Start
+================================================*/
+#bc{
+    .bc_top{
+        width: 45px;
+        height: 45px;
+        background: $hover;
+        text-align: center;
+        line-height: 45px;
+        border-radius: 8px;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        z-index: 999;
+        a{
+            font-size: 22px;
+            color: $para;
+        }
+    }
+}
+
+/*==============================================
+                BC Part End
+================================================*/

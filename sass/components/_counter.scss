@@ -1,0 +1,40 @@
+@import '../mixins/mixin';
+@import '../variables/variable';
+
+/*==============================================
+                Counter Part Start
+================================================*/
+#counter {
+    padding: 100px 0 100px;
+    clip-path: polygon(0 29%, 100% 30px, 100% 71%, 0% 92%);
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        @include after_tl(0, 0, 100%, 100%, rgba(0, 0, 0, 0.9));
+        z-index: -1;
+    }
+
+    .counter_text {
+        padding: 30px 0 30px;
+        // background: #181818;
+        border: 1px solid white;
+        // clip-path: polygon(0 15%, 100% 0%, 99% 84%, 0% 100%);
+        transform: skewY(-5deg);
+
+        h2 {
+            @include fs($white, 30px, 500, $rale);
+            padding-bottom: 16px;
+            transform: skewY(5deg);
+        }
+
+        p {
+            @include fs($white, 20px, 500, $rale);
+            transform: skewY(5deg);
+        }
+    }
+}
+
+/*==============================================
+                Counter Part End
+================================================*/

@@ -1,0 +1,47 @@
+@import '../mixins/mixin';
+@import '../variables/variable';
+
+/*==============================================
+                Navbar Part Start
+================================================*/
+.main_menu {
+    height: 110px;
+    border-bottom: 0.3px solid $hover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    &.menu_fix{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6)
+    }
+    ul {
+        li {
+            a {
+                @include fs($white, 16px, 400, $rale);
+                transition: all linear .3s;
+                padding: 0 15px !important;
+                position: relative;
+                &:hover {
+                    color: $hover;
+                    &::after{
+                        transform: scale(1);
+                    }
+                }
+                &::after{
+                    @include after_bl(-44px, 0, 100%, 3px, $hover);
+                    transform: scale(0);
+                    transition: all linear .3s;
+                }
+            }
+        }
+    }
+}
+/*==============================================
+                Navbar Part End
+================================================*/
